@@ -68,7 +68,7 @@ pipeline {
         stage ("Terraform Action") {
             steps {
                 echo "Terraform action is --> ${ACTION}"
-                // sh ('terraform ${ACTION} --auto-approve') 
+                sh ('terraform ${ACTION} --auto-approve') 
            }
         }
         stage ("Git Commit") {
